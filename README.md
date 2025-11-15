@@ -1,37 +1,73 @@
-# AI WARRANTY CHECKER  
-Automated Warranty Verification using AI & Computer Vision  
+🛠️ AI Warranty Checker
 
----
+An intelligent warranty checking system built using LangGraph, LangChain, Streamlit, and agentic reasoning with State Graph Agent + ReAct architecture.
 
-## 🎯 Project Overview  
-**AI WARRANTY CHECKER** is a Python-based tool designed to streamline the process of verifying product warranties. It uses Optical Character Recognition (OCR) and computer vision techniques to extract warranty details (such as issuance date, serial number, model, and expiry) from invoices/receipts and cross-checks them against expected warranty parameters. Ideal for service centres, consumer-electronics resellers or any business that needs to expedite warranty verification at scale.
+🚀 Overview
 
----
+AI Warranty Checker is an AI-powered application designed to analyze product details, extract important warranty information, and return clear, structured responses to users.
+It automates reading warranty documents, receipts, or user-provided text and determines:
 
-## 🔍 Features  
-- Quickly scan invoice images (JPEG/PNG/PDF) and extract text using OCR.  
-- Parse the extracted text to locate warranty‐relevant fields: serial number, issue date, expiry date, product model.  
-- Automatically compute remaining warranty duration or detect expired warranties.  
-- Batch-process multiple files to save time on manual verification.  
-- Configurable: update patterns/regEx for different brands or invoice formats.  
-- Lightweight and simple to deploy.
+Warranty validity
 
----
+Duration & expiry date
 
-## 🧩 Project Structure  
+Terms & conditions
 
----
+Coverage & exclusions
 
-## 🚀 Getting Started  
+Additional required actions
 
-### Prerequisites  
-- Python 3.8+  
-- (Optional) Virtual environment tool like `venv` or `conda`.  
+The app provides a simple, interactive UI using Streamlit, while the backend uses advanced agentic workflows for reliable reasoning.
 
-### Installation  
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/Adarsh-Me/AI_WARRANTY_CHECKER.git
-   cd AI_WARRANTY_CHECKER
-OCR_API_KEY=your_api_key_here
-LOG_LEVEL=INFO
+🧠 Tech Stack
+🔹 LangGraph
+
+Used to build the agent workflow using a State Graph Agent, allowing controlled, deterministic multi-step reasoning.
+
+🔹 LangChain
+
+Handles:
+
+LLM orchestration
+
+Document parsing
+
+Prompting
+
+ReAct-style reasoning traces
+
+🔹 ReAct Agent
+
+Implements Reason + Act loops for:
+
+Extracting warranty terms
+
+Calling internal tools
+
+Making logical decisions based on documents
+
+This improves accuracy for complex or ambiguous warranty texts.
+
+🔹 Streamlit (Frontend)
+
+Provides a clean, fast UI for users to:
+
+Upload receipts/invoices/warranty cards
+
+Enter product details
+
+View AI-generated warranty analysis
+
+📌 Features
+
+🔍 Automatic warranty extraction
+
+📄 Supports PDFs, text, and image-to-text (if integrated)
+
+⏳ Checks warranty validity & expiry
+
+🧩 AI reasoning with multi-step ReAct agent
+
+⚙️ Extensible LangGraph workflow
+
+🖥️ Simple Streamlit UI
